@@ -4,7 +4,7 @@
 
 replicaCount: 1
 createNamespace: true
-namespace: ${infra.kubernetes.namespace}
+namespace: <+pipeline.stages.Deploy.spec.infrastructure.infrastructureDefinition.spec.namespace>
 image:
   repository: nginx
   pullPolicy: IfNotPresent
